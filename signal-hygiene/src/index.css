@@ -1,0 +1,41 @@
+:root {
+  --red: #C41E1E;
+  --red-dark: #9B1818;
+  --red-light: #FF6B6B;
+  --black: #1A1A1A;
+  --white: #FAFAF7;
+  --cream: #F8F6F1;
+  --gray: #6B6B6B;
+  --gray-light: rgba(0,0,0,0.06);
+  --green: #2D936C;
+  --green-dark: #1F7A57;
+  --yellow: #E0A800;
+  --orange: #E06000;
+  --font-serif: 'Newsreader', 'Georgia', serif;
+  --font-sans: 'Work Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-serif);
+  background: var(--cream);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+}
+
+input, select, textarea, button { font-family: var(--font-sans); }
+
+::selection { background: rgba(196, 30, 30, 0.15); }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+@keyframes scaleIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+.fade-in { animation: fadeIn 0.5s ease-out; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 3px; }
